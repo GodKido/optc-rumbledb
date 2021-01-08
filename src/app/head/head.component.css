@@ -1,6 +1,9 @@
 body {
-    background-color: #0000ff;
+    background-color: #5a5a70;
     position: sticky;
     width: 100%;
-    height: 20%;
+}
+
+#titlebox {
+    height: 20px;
 }

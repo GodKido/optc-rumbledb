@@ -4,28 +4,32 @@
 <body>
     <ng-container id="table-page">
         
-        <p class="check">table works!</p>
-        <ng-container>
+        <!-- <p class="check">table works!</p> -->
+        <ng-container id="general">
             <table id="table" class="table table-striped" style="max-width: 80%;">
                 <thead id="table-header">
                     <tr>
                         <td> ID </td>
                         <td>ICON</td>
+                        <!-- <td>ARTWORK</td> -->
                         <td>NAME</td>
+                        <td>CLASS</td>
                         <td>STYLE</td>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let item of dummies">
-                        <td id="id">{{item.id}}</td>
-                        <td id="unit-icon"><img src={{item.icon}} alt="img"></td>
-                        <td id="name">{{item.name}}</td>
-                        <td id="style">{{item.style}}</td>
+                    <tr *ngFor="let character of characters">
+                        <td id="id">{{character.id}}</td>
+                        <td id="unit-icon"><img src={{character.icon}} alt="img"></td>
+                        <!-- <td id="unit-art"><img src={{character.artwork}} alt="artwork" style="width:40px; height:40px"></td> -->
+                        <td id="name">{{character.unitName}}</td>
+                        <td id="class">{{character.class}}</td>
+                        <td id="style">{{character.style}}</td>
                     </tr>
                 </tbody>
                 <!-- <td mat-cell *matCellDef="let element"> {{dummy}} </td> -->
             </table>
         </ng-container>
-        
+
     </ng-container>
 </body>

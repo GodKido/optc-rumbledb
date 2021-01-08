@@ -1,6 +1,6 @@
 import { Component, Inject, Input, OnInit, Output } from '@angular/core';
-import { Unit } from '../Unit';
 import { ImageUrlService } from '../services/image-url.service';
+import { characters } from '../../assets/characters/Characters';
 
 @Component({
   selector: 'app-table',
@@ -8,43 +8,32 @@ import { ImageUrlService } from '../services/image-url.service';
   styleUrls: ['./table.component.css']
 })
 export class TableComponent implements OnInit {
-  @Input() public sanitizedUrl: any;
+  @Input() public minUrl: any;
   @Input() public htmlTag: any;
   @Input() tempFileName: any;
+
   @Output() iconPath: any;
+
   imgPath: any;
-  // id: any;
+  characters = characters;
 
   constructor(private service: ImageUrlService) {
-    // this.fileNameBuilder(dummies[0].id);
-    console.log('+++++ ', this.dummies[0])
+    this.assignIcon();
   }
 
   ngOnInit(): void {
-    console.log('DUMMIES ', this.dummies);
   }
 
-  public dummies: Unit[] = [
-    {
-      id: 2958,
-      icon: 'assets/icons/f2958.png',
-      name: 'Luffy',
-      style: 'ATK'
-    },
-    {
-      id: 2588,
-      icon: 'assets/icons/f2588.png',
-      name: 'Nami',
-      style: 'DEF'
-    },
-  ];
+  assignIcon(){
+    for(let character of characters){
+      console.log('UNIT   ', characters);
 
-  fileNameBuilder(id: number) {
-    for (let unit of this.dummies) {
-      unit.icon = 'assets/icons/f' + id + '.png';
-      this.iconPath = unit.icon;
+      character.icon = this.service.assignImage(character.id);
+      console.log('UNIT plus img   ', character);
+
+      character.artwork = this.service.assignArtworkUrl(character.id);
+      console.log("UNIT plus art: ", character);
     }
-    console.log('------ ', this.iconPath)
   }
 
 }

@@ -1,37 +1,36 @@
 import { Injectable } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
-import { Luffy, Nami as dummy } from '../dummy'
 
 @Injectable({
   providedIn: 'root'
 })
 export class ImageUrlService {
-  public imgUrl: any;
-  private sanitizedUrl: any;
-  public tempFileName: any;
-  public htmlTag: any;
+  // public template = 'https://onepiece-treasurecruise.com/wp-content/uploads/f2958.png';
+  public minUrl: any;
+  // public imgTemplate = 'http://onepiece-treasurecruise.com/wp-content/uploads/c3062.png';
+  public artworkUrl: any;
 
   constructor(private sanitizer: DomSanitizer) { }
 
-  tempFileNameGen(id: number) {
-    if(id != null || id != undefined){
-      this.tempFileName = `/home/luca/Scrivania/optc-rumble/rumble-db/src/app/icons/f` + id +`.png`;
-    }
-    console.log(this.tempFileName);
+  // build the URL for the image retrieving the unit ID
+  assignImage(id: number) {
+    console.log('---ASSIGN URL FUNCTION---')
+
+    this.minUrl = 'https://onepiece-treasurecruise.com/wp-content/uploads/f' + id + '.png';
+    console.log('icon url: --> ', this.minUrl)
+    console.log('Icon assigned!')
+
+    return this.minUrl;
   }
 
-  assignImage(id: number){
-      this.imgUrl = 'https://onepiece-treasurecruise.com/wp-content/uploads/f' + id + '.png';
-      this.sanitizedUrl = this.sanitizer.bypassSecurityTrustHtml(this.imgUrl);
-      this.htmlTagGenerator(id);
-      return this.sanitizedUrl;
-  }
+  assignArtworkUrl(id: number){
+    console.log('---ASSIGN ART URL FUNCTION---')
 
-  htmlTagGenerator(id: number) {
-    if(id != null || id != undefined){
-      this.htmlTag = `<img src="` + this.sanitizedUrl + `">`
-    }
-    return this.htmlTag;
+    this.artworkUrl = 'http://onepiece-treasurecruise.com/wp-content/uploads/c' + id + '.png';
+    console.log('artwork url: --> ', this.artworkUrl)
+    console.log('Artwork assigned!')
+
+    return this.artworkUrl;
   }
 
 }

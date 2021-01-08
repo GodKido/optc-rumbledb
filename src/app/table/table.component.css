@@ -3,6 +3,10 @@
     color: red;
 }
 
+#general {
+    margin: 50px;
+}
+
 #table-page {
     margin-right: 15px;
 }

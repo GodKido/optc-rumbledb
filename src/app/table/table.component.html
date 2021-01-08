@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<!-- <link rel="stylesheet" type="text/css" href="../common/libs/css/bootstrap.min.css"> -->
+<body>
+    <ng-container id="table-page">
+        
+        <p class="check">table works!</p>
+        <ng-container>
+            <table id="table" class="table table-striped" style="max-width: 80%;">
+                <thead id="table-header">
+                    <tr>
+                        <td> ID </td>
+                        <td>ICON</td>
+                        <td>NAME</td>
+                        <td>STYLE</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of dummies">
+                        <td id="id">{{item.id}}</td>
+                        <td id="unit-icon"><img src={{item.icon}} alt="img"></td>
+                        <td id="name">{{item.name}}</td>
+                        <td id="style">{{item.style}}</td>
+                    </tr>
+                </tbody>
+                <!-- <td mat-cell *matCellDef="let element"> {{dummy}} </td> -->
+            </table>
+        </ng-container>
+        
+    </ng-container>
+</body>

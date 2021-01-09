@@ -12,7 +12,7 @@ export enum Class {
 export enum Style {
     ATK = 'ATK',
     DEF = 'DEF',
-    OBS = 'OBS',
+    OBS = 'DBF',
     SUP = 'SPT',
-    HLR = 'DBF'
+    HLR = 'RCV'
 }

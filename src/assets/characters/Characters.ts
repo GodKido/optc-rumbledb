@@ -1,50 +1,114 @@
 import { DomSanitizer } from "@angular/platform-browser";
 import { Class, Style } from "../Enums";
+import { Unit } from "../Unit";
 
-export let characters = [
+export let characters: Array<Unit> = [
     {
-        id: 2958,
-        unitName: 'Monkey D. Luffy',
-        altnames: ['V2 Snakeman', 'Super Type Luffy', 'ST Luffy'],
-        class: [Class.FGT, Class.FSP],
-        style: Style.ATK,
+        id: 1445,
         icon: '',
-        artwork: '' 
-    },
-    {
-        id: 2588,
-        unitName: 'Nami',
-        altnames: ['Legend Nami', '6+ Nami', 'Whole Cake Island Nami'],
-        class: [Class.CER, Class.STK],
-        style: Style.OBS,
-        icon: '',
-        artwork: ''
+        artwork: '',
+        unitName: 'Boa Hancock',
+        name2: 'Snake Princess',
+        altnames: ['6+', 'Boa', 'Legend', 'QCK', 'V1'],
+        class: [Class.SHT, Class.FSP],
+        rumble: {
+            style: Style.HLR,
+            styleIcon: '',
+            special: 'test',
+            skill: 'test',
+            target: 'test',
+            pattern: 'test',
+            resistance: 'test'
+        }
     },
     {
         id: 2034,
-        unitName: 'Borsalino',
-        altnames: [],
-        class: [Class.SLA, Class.SHT],
-        style: [Style.SUP],
         icon: '',
-        artwork: ''
+        artwork: '',
+        unitName: 'Borsalino',
+        name2: 'Navy HQ Greatest Military Power',
+        altnames: ['Kizaru', '6+', 'Legend', 'PSY'],
+        class: [Class.SLA, Class.SHT],
+        rumble: {
+            style: Style.SUP,
+            styleIcon: '',
+            special: '',
+            skill: '',
+            target: '',
+            pattern: '',
+            resistance: ''
+        }
+    },
+    {
+        id: 2400,
+        icon: '',
+        artwork: '',
+        unitName: 'Monkey D. Luffy',
+        name2: 'The Great Snake Surpassing The Future',
+        altnames: ['V2', 'Snakeman', 'Supertype', 'ST', 'Luffy', 'Rufy', 'STR'],
+        class: [Class.FGT, Class.FSP],
+        rumble: {
+            style: Style.ATK,
+            styleIcon: '',
+            special: '',
+            skill: '',
+            target: '',
+            pattern: '',
+            resistance: ''
+        }
+    },
+    {
+        id: 2588,
+        icon: '',
+        artwork: '',
+        unitName: 'Nami',
+        name2: 'Cat Burglar deceiving the world',
+        altnames: ['Legend', 'Nami', '6+', 'Whole Cake Island', 'DEX'],
+        class: [Class.CER, Class.STK],
+        rumble: {
+            style: Style.OBS,
+            styleIcon: '',
+            special: '',
+            skill: '',
+            target: '',
+            pattern: '',
+            resistance: ''
+        }
     },
     {
         id: 2444,
-        unitName: 'Donquijote Doflamingo',
-        altnames: [],
-        class: [Class.DRV, Class.CER],
-        style: [Style.DEF],
         icon: '',
-        artwork: ''
+        artwork: '',
+        unitName: 'Donquijote Doflamingo',
+        name2: `God's Sanction`,
+        altnames: ['V1', '6+', 'Doffy', 'Doflamingo', 'INT'],
+        class: [Class.DRV, Class.CER],
+        rumble: {
+            style: Style.DEF,
+            styleIcon: '',
+            special: '',
+            skill: '',
+            target: '',
+            pattern: '',
+            resistance: ''
+        }
     },
     {
-        id: 1445,
-        unitName: 'Boa Hancock',
-        altnames: [],
-        class: [Class.SHT, Class.FSP],
-        style: [Style.HLR],
+        id: 1675,
         icon: '',
-        artwork: ''
+        artwork: '',
+        unitName: 'random',
+        name2: `random`,
+        altnames: ['V1', '6+', 'Doffy', 'Doflamingo', 'INT'],
+        class: [Class.DRV, Class.CER],
+        rumble: {
+            style: Style.DEF,
+            styleIcon: '',
+            special: '',
+            skill: '',
+            target: '',
+            pattern: '',
+            resistance: ''
+        }
     }
 ]

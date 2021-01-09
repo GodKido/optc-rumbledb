@@ -1,12 +1,29 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 <!-- <link rel="stylesheet" type="text/css" href="../common/libs/css/bootstrap.min.css"> -->
+
 <body>
     <ng-container id="table-page">
         
-        <!-- <p class="check">table works!</p> -->
+        <!-- FILTER BOX -->
+        <ng-container>
+            <div id="filters-container">
+                <div id="button-container">
+                    <button id="filterbutton" type="button" mdbBtn color="secondary">Filter</button>
+                </div>
+                <div id="style-filters">
+                    <a href="#" (click)="filterByStyle()"><img src="../assets/icons/style_atk.png" alt="ATK" id="style1"></a>
+                    <a href="#" (click)="filterByStyle()"><img src="../assets/icons/style_defense.png" alt="DEF" id="style2"></a>
+                    <a href="#" (click)="filterByStyle()"><img src="../assets/icons/style_support.png" alt="SPT" id="style3"></a>
+                    <a href="#" (click)="filterByStyle()"><img src="../assets/icons/style_heal.png" alt="RCV" id="style4"></a>
+                    <a href="#" (click)="filterByStyle()"><img src="../assets/icons/style_debuff.png" alt="DBF" id="style5"></a>
+                </div>
+            </div>
+        </ng-container>
+
+        <!-- CHARACTER TABLE -->
         <ng-container id="general">
-            <table id="table" class="table table-striped" style="max-width: 80%;">
+            <table id="maintable" class="table table-striped" style="max-width: 80%;">
                 <thead id="table-header">
                     <tr>
                         <td> ID </td>
@@ -20,14 +37,20 @@
                 <tbody>
                     <tr *ngFor="let character of characters">
                         <td id="id">{{character.id}}</td>
-                        <td id="unit-icon"><img src={{character.icon}} alt="img"></td>
+                        <td id="unit-icon">
+                            <img src={{character.icon}} alt="{{character.id}}" id="charicon">
+                        </td>
                         <!-- <td id="unit-art"><img src={{character.artwork}} alt="artwork" style="width:40px; height:40px"></td> -->
                         <td id="name">{{character.unitName}}</td>
                         <td id="class">{{character.class}}</td>
-                        <td id="style">{{character.style}}</td>
+                        <td id="style">
+                            <div id="container">
+                                <img src="{{character.rumble.styleIcon}}" alt="{{character.rumble.style}}"
+                                    id="styleicon">
+                            </div>
+                        </td>
                     </tr>
                 </tbody>
-                <!-- <td mat-cell *matCellDef="let element"> {{dummy}} </td> -->
             </table>
         </ng-container>
 

@@ -1,5 +1,5 @@
 import { Class, Style } from "src/assets/Enums";
-import { Unit } from "./Unit";
+import { Unit } from "../assets/Unit";
 
 
 export let Luffy: Unit = {

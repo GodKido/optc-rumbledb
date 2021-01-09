@@ -1,6 +1,7 @@
 import { Component, Inject, Input, OnInit, Output } from '@angular/core';
-import { ImageUrlService } from '../services/image-url.service';
+import { ImageUrlService } from '../services/icons.service';
 import { characters } from '../../assets/characters/Characters';
+import { FilterIconsService } from '../filter.service';
 
 @Component({
   selector: 'app-table',
@@ -8,17 +9,20 @@ import { characters } from '../../assets/characters/Characters';
   styleUrls: ['./table.component.css']
 })
 export class TableComponent implements OnInit {
-  @Input() public minUrl: any;
-  @Input() public htmlTag: any;
-  @Input() tempFileName: any;
+  // @Input() public minUrl: any;
+  // @Input() public htmlTag: any;
+  // @Input() tempFileName: any;
 
   @Output() iconPath: any;
 
   imgPath: any;
+  showModal = false;
   characters = characters;
+  filteredCharacters = [];
 
-  constructor(private service: ImageUrlService) {
+  constructor(private service: ImageUrlService, private filter: FilterIconsService) {
     this.assignIcon();
+    this.rumbleStyleIcon();
   }
 
   ngOnInit(): void {
@@ -34,6 +38,16 @@ export class TableComponent implements OnInit {
       character.artwork = this.service.assignArtworkUrl(character.id);
       console.log("UNIT plus art: ", character);
     }
+  }
+
+  rumbleStyleIcon(){
+    for(let character of characters){
+      character.rumble.styleIcon = this.service.assignStyleIcon(character.id);
+    }
+  }
+
+  filterByStyle(){
+    this.filter;
   }
 
 }

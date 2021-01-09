@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+
 
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.component.html',
-  styleUrls: ['./modal.component.css']
+  styleUrls: ['./modal.component.css'],
+  providers: []
 })
-export class ModalComponent implements OnInit {
+export class ModalComponent {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  constructor(private modalService: NgbModal) {}
 
 }

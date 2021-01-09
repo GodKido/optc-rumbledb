@@ -3,9 +3,9 @@ import { Class, Style } from "../Enums";
 
 export let characters = [
     {
-        id: 2958,
+        id: 2400,
         unitName: 'Monkey D. Luffy',
-        altnames: ['V2 Snakeman', 'Super Type Luffy', 'ST Luffy'],
+        altnames: [],
         class: [Class.FGT, Class.FSP],
         style: Style.ATK,
         icon: '',

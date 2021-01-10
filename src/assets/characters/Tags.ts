@@ -13,5 +13,7 @@ export enum Tags {
     DOT = 'damage over time',
     HEAL = 'healer',
     DMG = 'damage dealer',
-    DMG_FIXED = 'fixed damage dealer'
+    DMG_FIXED = 'fixed damage dealer',
+    CUT = 'HP cut',
+    CRIT = 'crit chance up'
 }

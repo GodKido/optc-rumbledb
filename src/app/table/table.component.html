@@ -4,55 +4,68 @@
 
 <body>
     <ng-container id="table-page">
-        
+
         <!-- FILTER BOX -->
         <ng-container>
-            <div id="filters-container">
-                <div id="button-container">
-                    <button id="filterbutton" type="button" mdbBtn color="secondary">Filter</button>
-                </div>
-                <div id="style-filters">
-                    <a href="#" (click)="filterByStyle()"><img src="assets/icons/style_atk.png" alt="ATK" id="style1"></a>
-                    <a href="#" (click)="filterByStyle()"><img src="assets/icons/style_defense.png" alt="DEF" id="style2"></a>
-                    <a href="#" (click)="filterByStyle()"><img src="assets/icons/style_support.png" alt="SPT" id="style3"></a>
-                    <a href="#" (click)="filterByStyle()"><img src="assets/icons/style_heal.png" alt="RCV" id="style4"></a>
-                    <a href="#" (click)="filterByStyle()"><img src="assets/icons/style_debuff.png" alt="DBF" id="style5"></a>
-                </div>
-            </div>
+            <!-- <app-filters></app-filters> -->
+            <!-- <input type="text" [(ngModel)]="searchText" class="form-control" id="search" mdbInput />
+            <label for="search">Search</label> -->
         </ng-container>
 
         <!-- CHARACTER TABLE -->
-        <ng-container id="general">
-            <table id="maintable" class="table table-striped" style="max-width: 80%;">
-                <thead id="table-header">
-                    <tr>
-                        <td> ID </td>
-                        <td>ICON</td>
-                        <!-- <td>ARTWORK</td> -->
-                        <td>NAME</td>
-                        <td>CLASS</td>
-                        <td>STYLE</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let character of characters">
-                        <td id="id">{{character.id}}</td>
-                        <td id="unit-icon">
-                            <img src={{character.icon}} alt="{{character.id}}" id="charicon">
-                        </td>
-                        <!-- <td id="unit-art"><img src={{character.artwork}} alt="artwork" style="width:40px; height:40px"></td> -->
-                        <td id="name">{{character.unitName}}</td>
-                        <td id="class">{{character.class}}</td>
-                        <td id="style">
-                            <div id="container">
-                                <img src={{character.rumble.styleIcon}} alt="{{character.rumble.style}}"
-                                    id="styleicon">
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </ng-container>
+
+        <table mat-table class="unitListTable" [dataSource]="dataSource" style="width:80%; margin-left:80px;">
+            <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef>ID</th>
+                <td mat-cell *matCellDef="let character" style="text-align: center;">{{character.id}}</td>
+            </ng-container>
+            <ng-container matColumnDef="icon">
+                <th mat-header-cell *matHeaderCellDef style="text-align:centered">ICON</th>
+                <td mat-cell *matCellDef="let character">
+                    <img src="{{character.icon}}" alt="{{character.name}}" class="charIcon">
+                </td>
+            </ng-container>
+            <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef>NAME</th>
+                <td mat-cell *matCellDef="let character">{{character.unitName}}</td>
+            </ng-container>
+            <ng-container matColumnDef="classes">
+                <th mat-header-cell *matHeaderCellDef>CLASS</th>
+                <td mat-cell *matCellDef="let character">
+                    <span *ngIf="isDual === false">
+                        <div style="margin-left: 170px;">
+                            <img src="{{character.classIcon}}" alt="{{character.class}}" style="margin: 3px">
+                            <img src="{{character.class2Icon}}" alt="{{character.class2}}" style="margin: 3px">
+                        </div>
+                    </span>
+                    <span *ngIf="isDual === true" style="align-items:center;margin:3px">
+                        <img src="{{character.classIcon}}" alt="{{character.class}}" class="dualIcon">
+                    </span>
+                </td>
+            </ng-container>
+            <ng-container matColumnDef="style">
+                <th mat-header-cell *matHeaderCellDef>STYLE</th>
+                <td mat-cell *matCellDef="let character">
+                    <img src="{{character.rumble.styleIcon}}" alt="{{character.rumble.style}}" class="pfStyleIcon">
+                </td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+            <tr mat-row *matRowDef="let row; columns: columnsToDisplay"></tr>
+        </table>
+
+        <mat-paginator [pageSizeOptions]="[10, 20]" class="paginator" showFirstLastButtons></mat-paginator>
+        <!-- <div>
+            <mat-form-field *ngFor="let filter of filterSelectObj" style="margin-left: 15px;">
+              <mat-label>Filter {{filter.name}}</mat-label>
+              <select matNativeControl name="{{filter.columnProp}}" [(ngModel)]="filter.modelValue"
+                (change)="filterChange(filter,$event)">
+                <option value="">-- Select {{filter.name}} --</option>
+                <option [value]="item" *ngFor="let item of filter.options">{{item}}</option>
+              </select>
+            </mat-form-field>
+            &nbsp;
+            <button mat-flat-button color="warn" (click)="resetFilters()">Reset</button>
+        </div> -->
 
     </ng-container>
 </body>

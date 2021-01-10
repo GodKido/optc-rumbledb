@@ -11,7 +11,7 @@ export class FilterIconsService {
   constructor() { }
 
   filterByStyle(){
-    window.alert('not implemented');
+    console.log('not implemented');
   }
   
 }

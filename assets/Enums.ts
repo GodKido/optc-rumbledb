@@ -1,12 +1,14 @@
 export enum Class {
-    FGT = 'Fighter',
+    FTR = 'Fighter',
     SHT = 'Shooter',
     STK = 'Striker',
     SLA = 'Slasher',
     FSP = 'Free Spirit',
     CER = 'Cerebral',
     DRV = 'Driven',
-    PWH = 'Powerhouse'
+    PWH = 'Powerhouse',
+    DUAL = 'Dual',
+    NONE = ''
 }
 
 export enum Style {
@@ -15,4 +17,14 @@ export enum Style {
     OBS = 'DBF',
     SUP = 'SPT',
     HLR = 'RCV'
+}
+
+export enum Type {
+    STR = 'STR',
+    DEX = 'DEX',
+    QCK = 'QCK',
+    PSY = 'PSY',
+    INT = 'INT',
+    DUAL = 'Dual',
+    NONE = ''
 }

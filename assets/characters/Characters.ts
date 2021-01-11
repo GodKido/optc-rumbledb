@@ -6,6 +6,7 @@ import { Tags } from "./Tags";
 export let characters: Unit[] = [
     {
         id: 1445,
+        isExpanded: false,
         icon: '',
         artwork: '',
         unitName: 'Boa Hancock',
@@ -16,24 +17,18 @@ export let characters: Unit[] = [
         class2: Class.FSP,
         class2Icon: '',
         type: Type.QCK,
-        rumble: {
-            style: Style.HLR,
-            styleIcon: '',
-            special: {
-                content: '',
-                tags: []
-            },
-            skill: {
-                content: '',
-                tags: []
-            },
-            pattern: 'test',
-            target: 'test',
-            resistance: 'test',
-        }
+        style: Style.HLR,
+        styleIcon: '',
+        rumbleSpecial: '',
+        rumbleSkill: '',
+        rumblePattern: '',
+        rumbleTarget: '',
+        rumbleResistances: '',
+        tags: []
     },
     {
         id: 1985,
+        isExpanded: false,
         icon: '',
         artwork: '',
         unitName: 'Rufy&Ace',
@@ -44,24 +39,18 @@ export let characters: Unit[] = [
         class2: Class.NONE,
         class2Icon: '',
         type: Type.DUAL,
-        rumble: {
-            style: Style.SUP,
-            styleIcon: '',
-            special: {
-                content: 'Level 10: Targets Free Spirit allies for ATK boost (3 tiers, 20 s.), DEF boost (3 tiers, 20 s.). Targets wide-range enemies on the side for damage: 0.65x own ATK',
-                tags: [Class.FSP, Tags.BUFF, Tags.ATK, Tags.DEF, Tags.DMG]
-            },
-            skill: {
-                content: 'Level 5: Targets Free Spirit allies for tier 5 ATK boost and level 2 Crit chance boost',
-                tags: [Class.FSP, Tags.BUFF, Tags.ATK, Tags.CRIT]
-            },
-            pattern: 'Strong, Strong, Lv 1 Heal on nearby allies (short range), Strong',
-            target: 'Enemies nearby',
-            resistance: 'Paralysis (50% chance)'
-        }
+        style: Style.SUP,
+        styleIcon: '',
+        rumbleSpecial:  'Level 10: Targets Free Spirit allies for ATK boost (3 tiers, 20 s.), DEF boost (3 tiers, 20 s.). Targets wide-range enemies on the side for damage: 0.65x own ATK',
+        rumbleSkill: 'Level 5: Targets Free Spirit allies for tier 5 ATK boost and level 2 Crit chance boost',
+        rumblePattern: 'Strong, Strong, Lv 1 Heal on nearby allies (short range), Strong',
+        rumbleTarget: 'Enemies nearby',
+        rumbleResistances: 'Paralysis (50% chance)',
+        tags: [Tags.BUFF, Tags.ATK, Tags.DEF, Tags.DMG, Tags.BUFF, Tags.ATK, Tags.CRIT]
     },
     {
         id: 2034,
+        isExpanded: false,
         icon: '',
         artwork: '',
         unitName: 'Borsalino',
@@ -72,24 +61,18 @@ export let characters: Unit[] = [
         class2: Class.SHT,
         class2Icon: '',
         type: Type.PSY,
-        rumble: {
-            style: Style.SUP,
-            styleIcon: '',
-            special: {
-                content: '',
-                tags: [Tags.DMG, Tags.ATK, Tags.BUFF, Tags.CTS,]
-            },
-            skill: {
-                content: '',
-                tags: []
-            },
-            pattern: '',
-            target: '',
-            resistance: '',
-        }
+        style: Style.SUP,
+        styleIcon: '',
+        rumbleSpecial: '',
+        rumbleSkill: '',
+        rumblePattern: '',
+        rumbleTarget: '',
+        rumbleResistances: '',
+        tags: [Tags.DMG, Tags.ATK, Tags.BUFF, Tags.CTS,]
     },
     {
         id: 2400,
+        isExpanded: false,
         icon: '',
         artwork: '',
         unitName: 'Monkey D. Luffy',
@@ -100,24 +83,18 @@ export let characters: Unit[] = [
         class2: Class.FSP,
         class2Icon: '',
         type: Type.STR,
-        rumble: {
-            style: Style.ATK,
-            styleIcon: '',
-            special: {
-                content: '',
-                tags: []
-            },
-            skill: {
-                content: '',
-                tags: []
-            },
-            pattern: '',
-            target: '',
-            resistance: '',
-        }
+        style: Style.ATK,
+        styleIcon: '',
+        rumbleSpecial: '',
+        rumbleSkill: '',
+        rumblePattern: '',
+        rumbleTarget: '',
+        rumbleResistances: '',
+        tags: []
     },
     {
         id: 2588,
+        isExpanded: false,
         icon: '',
         artwork: '',
         unitName: 'Nami',
@@ -128,24 +105,18 @@ export let characters: Unit[] = [
         class2: Class.STK,
         class2Icon: '',
         type: Type.DEX,
-        rumble: {
-            style: Style.OBS,
-            styleIcon: '',
-            special: {
-                content: '',
-                tags: []
-            },
-            skill: {
-                content: '',
-                tags: []
-            },
-            pattern: '',
-            target: '',
-            resistance: '',
-        }
+        style: Style.OBS,
+        styleIcon: '',
+        rumbleSpecial: '',
+        rumbleSkill: '',
+        rumblePattern: '',
+        rumbleTarget: '',
+        rumbleResistances: '',
+        tags: []
     },
     {
         id: 2444,
+        isExpanded: false,
         icon: '',
         artwork: '',
         unitName: 'Donquijote Doflamingo',
@@ -156,24 +127,18 @@ export let characters: Unit[] = [
         class2: Class.CER,
         class2Icon: '',
         type: Type.INT,
-        rumble: {
-            style: Style.DEF,
-            styleIcon: '',
-            special: {
-                content: '',
-                tags: []
-            },
-            skill: {
-                content: '',
-                tags: []
-            },
-            pattern: '',
-            target: '',
-            resistance: '',
-        }
+        style: Style.DEF,
+        styleIcon: '',
+        rumbleSpecial: '',
+        rumbleSkill: '',
+        rumblePattern: '',
+        rumbleTarget: '',
+        rumbleResistances: '',
+        tags: []
     },
     {
         id: 2964,
+        isExpanded: false,
         icon: '',
         artwork: '',
         unitName: 'Blackbeard',
@@ -184,20 +149,101 @@ export let characters: Unit[] = [
         class2: Class.CER,
         class2Icon: '',
         type: Type.INT,
-        rumble: {
-            style: Style.DEF,
-            styleIcon: '',
-            special: {
-                content: 'Targets mid-range enemies for damage: 2x own ATK, boosts own ATK (10 tiers, 25 s.), boosts own CT loading speed (3 tiers, 25 s.)',
-                tags: [Tags.DMG, Tags.ATK, Tags.BUFF, Tags.CTS,]
-            },
-            skill: {
-                content: 'Targets INT allies for HP boost (5 tiers), when HP is below 60% boosts own CT loading speed (5 tiers)',
-                tags: [Type.INT, Tags.BUFF, Tags.HP, Tags.CTS]
-            },
-            pattern: 'Normal, Normal, Strong, Full power',
-            target: 'Enemies nearby',
-            resistance: 'Seldom heals own HP by 150 when below 50%'
-        }
-    }
+        style: Style.DEF,
+        styleIcon: '',
+        rumbleSpecial: 'Targets mid-range enemies for damage: 2x own ATK, boosts own ATK (10 tiers, 25 s.), boosts own CT loading speed (3 tiers, 25 s.)',
+        rumbleSkill: 'Targets INT allies for HP boost (5 tiers), when HP is below 60% boosts own CT loading speed (5 tiers)',
+        rumblePattern: 'Normal, Normal, Strong, Full power',
+        rumbleTarget: 'Enemies nearby',
+        rumbleResistances: 'Seldom heals own HP by 150 when below 50%',
+        tags: [Tags.DMG, Tags.ATK, Tags.BUFF, Tags.CTS, Tags.BUFF, Tags.HP, Tags.CTS]
+    },
+    {
+        id: 2980,
+        isExpanded: false,
+        icon: '',
+        artwork: '',
+        unitName: 'Eustass Kidd',
+        name2: 'Magnetic Captain Challenging the Dragon',
+        altnames: ['Kidd', 'Legend', 'Super Type', 'ST'],
+        class: Class.DRV,
+        classIcon: '',
+        class2: Class.STK,
+        class2Icon: '',
+        type: Type.DEX,
+        style: Style.DEF,
+        styleIcon: '',
+        rumbleSpecial:  'Level 10 (CT 28): Targets crew for tier 3 DEF boost (25 s.), targets enemies wide-range on the side for damage 2x own ATK',
+        rumbleSkill: 'Targets DEX allies for tier 2 DEF boost and tier 5 HP boost',
+        rumblePattern: 'Strong, Strong, tier 2 Heal self',
+        rumbleTarget: 'Enemies with high ATK stat',
+        rumbleResistances: 'DoT (50% chance)',
+        tags: [Tags.BUFF, Tags.HP, Tags.DEF, Tags.DMG]
+    },
+    {
+        id: 2962,
+        isExpanded: false,
+        icon: '',
+        artwork: '',
+        unitName: 'Charlotte Katakuri',
+        name2: 'Haki that Conquers the Future',
+        altnames: ['V3', 'Katakuri', 'Super Type', 'ST', 'Legend'],
+        class: Class.DRV,
+        classIcon: '',
+        class2: Class.FTR,
+        class2Icon: '',
+        type: Type.INT,
+        style: Style.OBS,
+        styleIcon: '',
+        rumbleSpecial:  'Level 10 (28 CT): Targets all enemies for 2200 fixed damage, targets Free Spirit/Cerebral/Powerhouse enemies for tier 5 SPD down (20 s.) and tier 5 CT loading speed (20 s.)',
+        rumbleSkill: 'Level 5: Targets INT allies for tier 5 SPD boost, targets PSY enemies for tier 4 DEF down and tier 5 CT loading speed down',
+        rumblePattern: 'Normal, tier 2 Heal self, Strong, Normal',
+        rumbleTarget: 'Enemies close',
+        rumbleResistances: 'Paralysis (50% chance)',
+        tags: [Tags.DMG_FIXED, Tags.DEBUFF, Tags.BUFF, Tags.SPD, Tags.CTS, Tags.DEF]
+    },
+    {
+        id: 1879,
+        isExpanded: false,
+        icon: '',
+        artwork: '',
+        unitName: 'Bartolomeo the Cannibal',
+        name2: 'Captain of the Barto Club Pirates',
+        altnames: ['Raid', 'Barto'],
+        class: Class.STK,
+        classIcon: '',
+        class2: Class.DRV,
+        class2Icon: '',
+        type: Type.PSY,
+        style: Style.DEF,
+        styleIcon: '',
+        rumbleSpecial:  'Level 10 (25 CT): Targets 1 enemy for 2350 fixed damage, targets self for tier 15 ATK boost (24 s.)',
+        rumbleSkill: 'First 25 seconds after battle start: targets crew for tier 5 HP boost and tier 1 DEF boost',
+        rumblePattern: 'Normal, Normal, Strong',
+        rumbleTarget: 'Enemy with less HP left',
+        rumbleResistances: '',
+        tags: [Tags.DMG_FIXED, Tags.BUFF, Tags.ATK, Tags.HP, Tags.DEF]
+    },
+    {
+        id: 3008,
+        isExpanded: false,
+        icon: '',
+        artwork: '',
+        unitName: 'Sugar',
+        name2: 'Bulging Eyes of the Lord of the Toys',
+        altnames: ['Legend', 'Sugar', 'Super Type', 'ST'],
+        class: Class.DRV,
+        classIcon: '',
+        class2: Class.CER,
+        class2Icon: '',
+        type: Type.QCK,
+        style: Style.OBS,
+        styleIcon: '',
+        rumbleSpecial:  'Level 10 (35 CT): Targets all enemies for tier 3 DEF down (18 s.), targets 2 STR enemies for tier 9 ATK down and SPD down (24 s.)',
+        rumbleSkill: 'Level 5: First 20 seconds from start of the battle: tier 8 CT loading speed reduction for 3 STR enemies, targets QCK allies for tier 5 CT loading speed buff',
+        rumblePattern: 'Normal, tier 1 Heal self, Normal, tier 2 Heal self',
+        rumbleTarget: 'Enemies close',
+        rumbleResistances: 'Seldom recovers heals own HP by 250',
+        tags: [Tags.DEBUFF, Tags.DEF, Tags.SPD, Tags.CTS, Tags.ATK, Tags.BUFF]
+    },
 ]

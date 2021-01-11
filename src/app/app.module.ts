@@ -7,21 +7,21 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableFilterModule } from 'mat-table-filter';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatListModule } from '@angular/material/list'
+import { MatButtonModule } from '@angular/material/button';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TableComponent } from './table/table.component';
 import { HeadComponent } from './head/head.component';
 import { ModalComponent } from './modal/modal.component';
-import { FiltersComponent } from './filters/filters.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TableComponent,
     HeadComponent,
-    ModalComponent,
-    FiltersComponent
+    ModalComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +32,9 @@ import { FiltersComponent } from './filters/filters.component';
     MatPaginatorModule,
     MatTableFilterModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatListModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

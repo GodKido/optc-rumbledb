@@ -35,20 +35,20 @@ export class ImageUrlService {
 
   assignStyleIcon(id: any) {
     for (let character of characters) {
-      if (character.rumble.style === Style.ATK) {
-        character.rumble.styleIcon = this.iconsFolder + "style_atk.png"
+      if (character.style === Style.ATK) {
+        character.styleIcon = this.iconsFolder + "style_atk.png"
       }
-      else if (character.rumble.style === Style.DEF) {
-        character.rumble.styleIcon = this.iconsFolder + "style_defense.png"
+      else if (character.style === Style.DEF) {
+        character.styleIcon = this.iconsFolder + "style_defense.png"
       }
-      else if (character.rumble.style === Style.HLR) {
-        character.rumble.styleIcon = this.iconsFolder + "style_heal.png"
+      else if (character.style === Style.HLR) {
+        character.styleIcon = this.iconsFolder + "style_heal.png"
       }
-      else if (character.rumble.style === Style.OBS) {
-        character.rumble.styleIcon = this.iconsFolder + "style_debuff.png"
+      else if (character.style === Style.OBS) {
+        character.styleIcon = this.iconsFolder + "style_debuff.png"
       }
-      else if (character.rumble.style === Style.SUP) {
-        character.rumble.styleIcon = this.iconsFolder + "style_support.png"
+      else if (character.style === Style.SUP) {
+        character.styleIcon = this.iconsFolder + "style_support.png"
       }
     }
   }

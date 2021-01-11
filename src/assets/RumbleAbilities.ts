@@ -3,8 +3,6 @@ import { Style } from "./Enums";
 
 export class RumbleAbilities {
     constructor(
-        public style: Style,
-        public styleIcon: any,
         public special = {
             content: '',
             tags: Array<any>()

@@ -1,16 +1,25 @@
-import { ChangeDetectorRef, Component, OnInit, Output, ViewChild } from '@angular/core';
+import { Component, OnInit, Output, ViewChild } from '@angular/core';
 import { ImageUrlService } from '../services/icons.service';
 import { characters } from '../../assets/characters/Characters';
-import { FilterIconsService } from '../filter.service';
-import { Class } from '../../assets/Enums';
+import { Class, Style } from '../../assets/Enums';
 import { Unit } from 'src/assets/Unit';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
+import { RumbleAbilities } from 'src/assets/RumbleAbilities';
+import { animate, state, style, transition, trigger } from '@angular/animations';
+
 
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html',
-  styleUrls: ['./table.component.css']
+  styleUrls: ['./table.component.css'],
+  animations: [
+    trigger('detailExpand', [
+      state('collapsed', style({ height: '0px', minHeight: '0' })),
+      state('expanded', style({ height: '*' })),
+      transition('expanded <=> collapsed', animate('225ms cubic-bezier(0.4, 0.0, 0.2, 1)')),
+    ]),
+  ],
 })
 export class TableComponent implements OnInit {
 
@@ -19,19 +28,26 @@ export class TableComponent implements OnInit {
 
   imgPath: any;
   dataSource = new MatTableDataSource<Unit>(characters);
+  rumbleDataSource = new MatTableDataSource<RumbleAbilities>();
+  rumbles;
   isDual = false;
-  columnsToDisplay = ['id', 'icon', 'name', 'classes', 'style'];
-  
+  isTableExpanded = false;
+  columnsToDisplay: string[] = ['id', 'icon', 'name', 'classes', 'style'];
+
   
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
   }
   
-  constructor(private service: ImageUrlService, private filter: FilterIconsService) { }
+  constructor(private service: ImageUrlService) { }
   
   ngOnInit(): void {
+    // this.rumbleDataSource = [];
+    console.log(this.rumbleDataSource);
     
     for (let character of characters) {
+      // this.rumbleDataSource.push(character.rumble);
+      // console.log('RUMBLE ABILITIES ', character.rumble)
       this.assignIcon();
       this.rumbleStyleIcon();
       
@@ -44,6 +60,7 @@ export class TableComponent implements OnInit {
       this.assignClassIcon();
       
     }
+    console.log(this.dataSource);
     // document.getElementById('searchBar');
   }
 
@@ -64,8 +81,24 @@ export class TableComponent implements OnInit {
 
   rumbleStyleIcon() {
     for (let character of characters) {
-      character.rumble.styleIcon = this.service.assignStyleIcon(character.id);
+      character.styleIcon = this.service.assignStyleIcon(character.id);
     }
+  }
+
+  applyFilter(filterValue: string){
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
+
+  filterRumble(filterValue: string){
+    this.rumbleDataSource.filter = filterValue.trim().toLowerCase();
+  }
+
+  toggleRumble() {
+    this.isTableExpanded = !this.isTableExpanded;
+
+    this.dataSource.data.forEach((row: any) => {
+      row.isExpanded = this.isTableExpanded;
+    })
   }
 
 }

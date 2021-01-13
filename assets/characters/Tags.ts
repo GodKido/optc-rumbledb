@@ -25,7 +25,8 @@ export enum DBFEnemy {
     DMG = 'damage dealer',
     DMG_FIXED = 'fixed damage dealer',
     CUT = 'HP cut',
-    GRD = 'guard rate reduction'
+    GRD = 'guard rate reduction',
+    CRIT = 'critical hit chance reduction'
 }
 
 export enum HealCrew {

@@ -31,7 +31,7 @@ export let characters: Unit[] = [
         isExpanded: false,
         icon: '',
         artwork: '',
-        unitName: 'Rufy&Ace',
+        unitName: 'Luffy&Ace',
         name2: '',
         altnames: ['Lace', 'Rufy', 'Luffy', 'Ace', 'dual', 'legend'],
         class: Class.DUAL,

@@ -1,6 +1,6 @@
 import { Type } from "./Enums";
 import { Class, Style } from "src/assets/Enums";
-import { Tags } from "./characters/Tags";
+import { BuffCrew, DBFEnemy, HealCrew } from "./characters/Tags";
 
 export interface Unit {
         id: number;
@@ -22,5 +22,5 @@ export interface Unit {
         rumblePattern: string,
         rumbleTarget: string,
         rumbleResistances: string,
-        tags: Tags[]
+        tags: Array<any>
 }

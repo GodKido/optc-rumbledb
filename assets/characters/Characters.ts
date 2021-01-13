@@ -3,8 +3,82 @@ import { Unit } from "../Unit";
 import { BuffCrew, DBFEnemy, HealCrew } from "./Tags";
 
 export let characters: Unit[] = [
+
+    // 227
     {
-        id: 1445,
+        id: '0227',
+        isExpanded: false,
+        icon: '',
+        artwork: '',
+        unitName: 'Hawk-Eyes Mihawk',
+        name2: '',
+        altnames: [],
+        class: Class.SLA,
+        classIcon: '',
+        class2: Class.NONE,
+        class2Icon: '',
+        type: Type.DEX,
+        style: Style.ATK,
+        styleIcon: '',
+        rumbleSpecial:  'Level 10 (26 CT): Targets enemies wide range on the front for 43% HP Cut',
+        rumbleSkill: 'Level 5: Targets Slasher allies for tier 6 ATK boost',
+        rumblePattern: 'Normal, Normal, Strong, Full power',
+        rumbleTarget: 'Closest enemy',
+        rumbleResistances: '',
+        tags: [DBFEnemy.CUT, BuffCrew.ATK]
+    },
+
+    // 390
+    {
+        id: '0390',
+        isExpanded: false,
+        icon: '',
+        artwork: '',
+        unitName: 'Emporio Ivankov',
+        name2: 'Queen of Kamabakka Kingdom (Retired)',
+        altnames: ['Raid', 'Iva'],
+        class: Class.FTR,
+        classIcon: '',
+        class2: Class.FSP,
+        class2Icon: '',
+        type: Type.QCK,
+        style: Style.DEF,
+        styleIcon: '',
+        rumbleSpecial:  'Level 10 (18 CT): Targets enemies on the side (mid-range) for damage by 0.7x own ATK and tier 12 ATK reduction (20 s.)',
+        rumbleSkill: 'Level 5: Targets STR/DEX/QCK allies for tier 3 DEF boost, and targets self for tier 7 HP boost',
+        rumblePattern: 'Normal, tier 2 Heal self, Strong, Normal',
+        rumbleTarget: 'Closest enemy',
+        rumbleResistances: '',
+        tags: [DBFEnemy.DMG, DBFEnemy.ATK, BuffCrew.DEF, BuffCrew.HP]
+    },
+
+    // 1413
+    {
+        id: '1413',
+        isExpanded: false,
+        icon: '',
+        artwork: '',
+        unitName: 'Whitebeard',
+        name2: 'Emperor',
+        altnames: ['6+', 'legend', 'WB', 'V1'],
+        class: Class.STK,
+        classIcon: '',
+        class2: Class.PWH,
+        class2Icon: '',
+        type: Type.STR,
+        style: Style.ATK,
+        styleIcon: '',
+        rumbleSpecial: 'Level 10 (23 CT): Targets all enemies for 48% HP Cut',
+        rumbleSkill: 'Level 5: When unit has 30% or less HP remaining, targets crew for tier 8 ATK boost and targets self for tier 8 DEF boost',
+        rumblePattern: 'Normal, Strong, Full power',
+        rumbleTarget: 'Closest enemy',
+        rumbleResistances: 'Damage over Time (70% chance)',
+        tags: [DBFEnemy.CUT, BuffCrew.ATK, BuffCrew.DEF]
+    },
+
+    // 1445
+    {
+        id: '1445',
         isExpanded: false,
         icon: '',
         artwork: '',
@@ -25,8 +99,10 @@ export let characters: Unit[] = [
         rumbleResistances: 'Bind (50% chance)',
         tags: [BuffCrew.ATK, BuffCrew.RCV, DBFEnemy.DMG_FIXED, DBFEnemy.SPD, HealCrew.HEAL]
     },
+
+    // 1879
     {
-        id: 1879,
+        id: '1879',
         isExpanded: false,
         icon: '',
         artwork: '',
@@ -40,15 +116,17 @@ export let characters: Unit[] = [
         type: Type.PSY,
         style: Style.DEF,
         styleIcon: '',
-        rumbleSpecial:  'Level 10 (25 CT): Targets 1 enemy for 2350 fixed damage. Targets self for tier 15 ATK boost (24 s.)',
+        rumbleSpecial: 'Level 10 (25 CT): Targets 1 enemy for 2350 fixed damage. Targets self for tier 15 ATK boost (24 s.)',
         rumbleSkill: 'First 25 seconds after battle start: targets crew for tier 5 HP boost and tier 1 DEF boost',
         rumblePattern: 'Normal, Normal, Strong',
         rumbleTarget: 'Enemy with less HP left',
         rumbleResistances: '',
         tags: [DBFEnemy.DMG_FIXED, BuffCrew.ATK, BuffCrew.HP, BuffCrew.DEF]
     },
+
+    // 1985
     {
-        id: 1985,
+        id: '1985',
         isExpanded: false,
         icon: '',
         artwork: '',
@@ -62,15 +140,17 @@ export let characters: Unit[] = [
         type: Type.DUAL,
         style: Style.SUP,
         styleIcon: '',
-        rumbleSpecial:  'Level 10 (27 CT): Targets Free Spirit allies for tier 3 ATK and DEF boost ( 20 s.). Targets wide-range enemies on the side for damage by 0.65x own ATK',
+        rumbleSpecial: 'Level 10 (27 CT): Targets Free Spirit allies for tier 3 ATK and DEF boost ( 20 s.). Targets wide-range enemies on the side for damage by 0.65x own ATK',
         rumbleSkill: 'Level 5: Targets Free Spirit allies for tier 5 ATK boost and level 2 Crit chance boost',
         rumblePattern: 'Strong, Strong, Lv 1 Heal on nearby allies (short range), Strong',
         rumbleTarget: 'Closest enemy',
         rumbleResistances: 'Paralysis (50% chance)',
         tags: [BuffCrew.ATK, BuffCrew.DEF, DBFEnemy.DMG, BuffCrew.CRIT]
     },
+
+    // 2034
     {
-        id: 2034,
+        id: '2034',
         isExpanded: false,
         icon: '',
         artwork: '',
@@ -91,8 +171,10 @@ export let characters: Unit[] = [
         rumbleResistances: 'Silence (70% chance)',
         tags: [DBFEnemy.DMG, BuffCrew.ATK, BuffCrew.SPD, BuffCrew.CTS,]
     },
+
+    // 2181
     {
-        id: 2181,
+        id: '2181',
         isExpanded: false,
         icon: '',
         artwork: '',
@@ -106,15 +188,17 @@ export let characters: Unit[] = [
         type: Type.DUAL,
         style: Style.DEF,
         styleIcon: '',
-        rumbleSpecial:  'Level 10 (27 CT): Targets all enemies for 32% HP Cut, Heals own HP by 2.15x own RCV',
+        rumbleSpecial: 'Level 10 (27 CT): Targets all enemies for 32% HP Cut, Heals own HP by 2.15x own RCV',
         rumbleSkill: 'Level 5: Targets crew for tier 5 Guard rate buff, when own HP is below 50% targets self for tier 3 DEF boost',
         rumblePattern: 'Normal, Normal, tier 2 Heal self',
         rumbleTarget: 'Closest enemy',
         rumbleResistances: 'Silence (50% chance)',
         tags: [DBFEnemy.CUT, BuffCrew.HEAL, BuffCrew.GRD, BuffCrew.DEF]
     },
+
+    // 2444
     {
-        id: 2444,
+        id: '2444',
         isExpanded: false,
         icon: '',
         artwork: '',
@@ -135,8 +219,34 @@ export let characters: Unit[] = [
         rumbleResistances: 'Seldom heals own HP by 150 when under 50%',
         tags: [DBFEnemy.DMG, BuffCrew.DEF, BuffCrew.CRIT, BuffCrew.HP, BuffCrew.ATK]
     },
+
+    // 2465
     {
-        id: 2588,
+        id: '2465',
+        isExpanded: false,
+        icon: '',
+        artwork: '',
+        unitName: 'Charlotte Cracker',
+        name2: `Thousand Arms' Fierce Attack`,
+        altnames: ['Legend', 'Cracker', '6*'],
+        class: Class.PWH,
+        classIcon: '',
+        class2: Class.SLA,
+        class2Icon: '',
+        type: Type.QCK,
+        style: Style.ATK,
+        styleIcon: '',
+        rumbleSpecial:  'Level 10 (37 CT): Targets enemies mid-range for damage by 1.3x own ATK. Targets Slasher/Powerhouse allies for tier 5 Crit chance boost (15 s.), and when HP is below 50 targets self for 25% CT reduction',
+        rumbleSkill: 'Level 5: Targets Slasher/Powerhouse for tier 6 CT loading speed boost',
+        rumblePattern: 'Normal, Normal, Strong, Full power',
+        rumbleTarget: 'Closest enemy',
+        rumbleResistances: 'Bind (50% chance)',
+        tags: [DBFEnemy.DMG, BuffCrew.CRIT, BuffCrew.CTR, BuffCrew.CTS]
+    },
+
+    // 2588
+    {
+        id: '2588',
         isExpanded: false,
         icon: '',
         artwork: '',
@@ -157,8 +267,35 @@ export let characters: Unit[] = [
         rumbleResistances: 'Seldom heals own HP by 150',
         tags: [DBFEnemy.DMG, DBFEnemy.PAR, BuffCrew.CTS]
     },
+
+
+    // 2850
     {
-        id: 2958,
+        id: '2850',
+        isExpanded: false,
+        icon: '',
+        artwork: '',
+        unitName: 'Rebecca&Viola',
+        name2: 'Princesses of the Dressrosa Kingdom',
+        altnames: ['ViolaBecca', 'TM', 'Dual'],
+        class: Class.DUAL,
+        classIcon: '',
+        class2: Class.NONE,
+        class2Icon: '',
+        type: Type.DUAL,
+        style: Style.HLR,
+        styleIcon: '',
+        rumbleSpecial: 'Level 10 (26 CT): Heals HP of allies wide range by 2.35x own RCV. First 50 seconds of battle, targets allies wide range for tier 5 ATK boost (24 s.)',
+        rumbleSkill: 'Level 5: First 30 seconds of battle, targets crew for tier 6 CT loading speed boost',
+        rumblePattern: 'Normal, tier 1 Heal surrounding allies (mid-range), Normal, tier 2 Heal surrounding allies (short range)',
+        rumbleTarget: 'Closest enemy',
+        rumbleResistances: 'Silence (30% chance)',
+        tags: [HealCrew.HEAL, BuffCrew.ATK, BuffCrew.CTS]
+    },
+
+    // 2958
+    {
+        id: '2958',
         isExpanded: false,
         icon: '',
         artwork: '',
@@ -179,8 +316,34 @@ export let characters: Unit[] = [
         rumbleResistances: 'Bind (50% chance)',
         tags: [DBFEnemy.DMG, BuffCrew.ATK, BuffCrew.SPD]
     },
+
+    // 2962
     {
-        id: 2964,
+        id: '2962',
+        isExpanded: false,
+        icon: '',
+        artwork: '',
+        unitName: 'Charlotte Katakuri',
+        name2: 'Haki that Conquers the Future',
+        altnames: ['V3', 'Katakuri', 'Super Type', 'ST', 'Legend'],
+        class: Class.DRV,
+        classIcon: '',
+        class2: Class.FTR,
+        class2Icon: '',
+        type: Type.INT,
+        style: Style.OBS,
+        styleIcon: '',
+        rumbleSpecial: 'Level 10 (28 CT): Targets all enemies for 2200 fixed damage, targets Free Spirit/Cerebral/Powerhouse enemies for tier 5 SPD down and CT loading speed reduction (20 s.)',
+        rumbleSkill: 'Level 5: Targets INT allies for tier 5 SPD boost, targets PSY enemies for tier 4 DEF down and tier 5 CT loading speed down',
+        rumblePattern: 'Normal, tier 2 Heal self, Strong, Normal',
+        rumbleTarget: 'Closest enemy',
+        rumbleResistances: 'Paralysis (50% chance)',
+        tags: [DBFEnemy.DMG_FIXED, DBFEnemy.SPD, DBFEnemy.CTS, BuffCrew.SPD, DBFEnemy.DEF]
+    },
+
+    // 2964
+    {
+        id: '2964',
         isExpanded: false,
         icon: '',
         artwork: '',
@@ -201,30 +364,10 @@ export let characters: Unit[] = [
         rumbleResistances: 'Seldom heals own HP by 150 when below 50%',
         tags: [DBFEnemy.DMG, BuffCrew.ATK, BuffCrew.CTS, BuffCrew.HP, BuffCrew.CTS]
     },
+
+    // 2980
     {
-        id: 2962,
-        isExpanded: false,
-        icon: '',
-        artwork: '',
-        unitName: 'Charlotte Katakuri',
-        name2: 'Haki that Conquers the Future',
-        altnames: ['V3', 'Katakuri', 'Super Type', 'ST', 'Legend'],
-        class: Class.DRV,
-        classIcon: '',
-        class2: Class.FTR,
-        class2Icon: '',
-        type: Type.INT,
-        style: Style.OBS,
-        styleIcon: '',
-        rumbleSpecial:  'Level 10 (28 CT): Targets all enemies for 2200 fixed damage, targets Free Spirit/Cerebral/Powerhouse enemies for tier 5 SPD down and CT loading speed reduction (20 s.)',
-        rumbleSkill: 'Level 5: Targets INT allies for tier 5 SPD boost, targets PSY enemies for tier 4 DEF down and tier 5 CT loading speed down',
-        rumblePattern: 'Normal, tier 2 Heal self, Strong, Normal',
-        rumbleTarget: 'Closest enemy',
-        rumbleResistances: 'Paralysis (50% chance)',
-        tags: [DBFEnemy.DMG_FIXED, DBFEnemy.SPD, DBFEnemy.CTS, BuffCrew.SPD, DBFEnemy.DEF]
-    },
-    {
-        id: 2980,
+        id: '2980',
         isExpanded: false,
         icon: '',
         artwork: '',
@@ -238,15 +381,17 @@ export let characters: Unit[] = [
         type: Type.DEX,
         style: Style.DEF,
         styleIcon: '',
-        rumbleSpecial:  'Level 10 (CT 28): Targets crew for tier 3 DEF boost (25 s.), targets enemies wide-range on the side for damage 2x own ATK',
+        rumbleSpecial: 'Level 10 (CT 28): Targets crew for tier 3 DEF boost (25 s.), targets enemies wide-range on the side for damage 2x own ATK',
         rumbleSkill: 'Targets DEX allies for tier 2 DEF boost and tier 5 HP boost',
         rumblePattern: 'Strong, Strong, tier 2 Heal self',
         rumbleTarget: 'Enemies with high ATK stat',
         rumbleResistances: 'DoT (50% chance)',
         tags: [BuffCrew.HP, BuffCrew.DEF, DBFEnemy.DMG]
     },
+
+    // 3008
     {
-        id: 3008,
+        id: '3008',
         isExpanded: false,
         icon: '',
         artwork: '',
@@ -260,15 +405,41 @@ export let characters: Unit[] = [
         type: Type.QCK,
         style: Style.OBS,
         styleIcon: '',
-        rumbleSpecial:  'Level 10 (35 CT): Targets all enemies for tier 3 DEF down (18 s.), targets 2 STR enemies for tier 9 ATK down and SPD down (24 s.)',
+        rumbleSpecial: 'Level 10 (35 CT): Targets all enemies for tier 3 DEF down (18 s.), targets 2 STR enemies for tier 9 ATK and SPD reduction (24 s.)',
         rumbleSkill: 'Level 5: First 20 seconds from start of the battle: tier 8 CT loading speed reduction for 3 STR enemies, targets QCK allies for tier 5 CT loading speed buff',
         rumblePattern: 'Normal, tier 1 Heal self, Normal, tier 2 Heal self',
         rumbleTarget: 'Closest enemy',
         rumbleResistances: 'Seldom recovers heals own HP by 250',
         tags: [DBFEnemy.DEF, DBFEnemy.SPD, DBFEnemy.CTS, BuffCrew.ATK]
     },
+
+    // 3027
     {
-        id: 3065,
+        id: '3027',
+        isExpanded: false,
+        icon: '',
+        artwork: '',
+        unitName: 'Trafalgar Law',
+        name2: 'Alliance to Open the Land of Wano',
+        altnames: ['V3', 'Law', 'Traffy', 'Wano', 'Yoshistahp'],
+        class: Class.FSP,
+        classIcon: '',
+        class2: Class.SLA,
+        class2Icon: '',
+        type: Type.PSY,
+        style: Style.ATK,
+        styleIcon: '',
+        rumbleSpecial:  'Level 10 (35 CT): Targets enemies on wide range for 2200 fixed damage. Targets PSY allies for Silence, Bind and Paralysis Heal by 22 seconds',
+        rumbleSkill: 'Level 5: Targets PSY allies for tier 6 CT loading speed boost. First 40 seconds of battle, targets Driven/Powerhouse enemies for tier 6 CT loading speed reduction, Guard rate reduction and SPD reduction',
+        rumblePattern: 'Normal, Normal, Strong, Full power',
+        rumbleTarget: 'Closest enemy',
+        rumbleResistances: 'Seldom heals own HP by 250 when below 50%',
+        tags: [DBFEnemy.DMG_FIXED, HealCrew.BIND, HealCrew.PAR, HealCrew.SIL, BuffCrew.CTS, DBFEnemy.CTS, DBFEnemy.SPD, DBFEnemy.GRD]
+    },
+
+    // 3065
+    {
+        id: '3065',
         isExpanded: false,
         icon: '',
         artwork: '',
@@ -282,55 +453,11 @@ export let characters: Unit[] = [
         type: Type.DUAL,
         style: Style.ATK,
         styleIcon: '',
-        rumbleSpecial:  'Level 10 (32 CT): Targets 2 enemies for damage by 3.5x own ATK. Targets crew for tier 5 ATK boost and tier 7 SPD boost (20 s.)',
+        rumbleSpecial: 'Level 10 (32 CT): Targets 2 enemies for damage by 3.5x own ATK. Targets crew for tier 5 ATK boost and tier 7 SPD boost (20 s.)',
         rumbleSkill: 'Level 5: Targets crew for tier 6 ATK boost and tier 3 SPD boost',
         rumblePattern: 'Normal, Normal, Strong, Full power',
         rumbleTarget: 'Enemy with highest HP left',
         rumbleResistances: 'Silence',
         tags: [DBFEnemy.DMG, BuffCrew.ATK, BuffCrew.SPD]
-    },
-    {
-        id: 2850,
-        isExpanded: false,
-        icon: '',
-        artwork: '',
-        unitName: 'Rebecca&Viola',
-        name2: 'Princesses of the Dressrosa Kingdom',
-        altnames: ['ViolaBecca', 'TM', 'Dual'],
-        class: Class.DUAL,
-        classIcon: '',
-        class2: Class.NONE,
-        class2Icon: '',
-        type: Type.DUAL,
-        style: Style.HLR,
-        styleIcon: '',
-        rumbleSpecial:  'Level 10 (26 CT): Heals HP of allies wide range by 2.35x own RCV. First 50 seconds of battle, targets allies wide range for tier 5 ATK boost (24 s.)',
-        rumbleSkill: 'Level 5: First 30 seconds of battle, targets crew for tier 6 CT loading speed boost',
-        rumblePattern: 'Normal, tier 1 Heal surrounding allies (mid-range), Normal, tier 2 Heal surrounding allies (short range)',
-        rumbleTarget: 'Closest enemy',
-        rumbleResistances: 'Silence (30% chance)',
-        tags: [HealCrew.HEAL, BuffCrew.ATK, BuffCrew.CTS]
-    },
-    {
-        id: 1413,
-        isExpanded: false,
-        icon: '',
-        artwork: '',
-        unitName: 'Whitebeard',
-        name2: 'Emperor',
-        altnames: ['6+', 'legend', 'WB', 'V1'],
-        class: Class.STK,
-        classIcon: '',
-        class2: Class.PWH,
-        class2Icon: '',
-        type: Type.STR,
-        style: Style.ATK,
-        styleIcon: '',
-        rumbleSpecial:  'Level 10 (23 CT): Targets all enemies for 48% HP Cut',
-        rumbleSkill: 'Level 5: When unit has 30% or less HP remaining, targets crew for tier 8 ATK boost and targets self for tier 8 DEF boost',
-        rumblePattern: 'Normal, Strong, Full power',
-        rumbleTarget: 'Closest enemy',
-        rumbleResistances: 'Damage over Time (70% chance)',
-        tags: [DBFEnemy.CUT, BuffCrew.ATK, BuffCrew.DEF]
     },
 ]

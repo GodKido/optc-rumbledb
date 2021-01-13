@@ -3,7 +3,7 @@ import { Class, Style } from "src/assets/Enums";
 import { BuffCrew, DBFEnemy, HealCrew } from "./characters/Tags";
 
 export interface Unit {
-        id: number;
+        id: string;
         isExpanded: boolean;
         icon: any;
         artwork: any;

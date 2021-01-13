@@ -7,7 +7,8 @@ export enum BuffCrew {
     HEAL = 'healer',
     CTS = 'CT loading speed',
     CRIT = 'crit chance up',
-    GRD = 'guard rate up'
+    GRD = 'guard rate up',
+    CTR = 'CT reduction'
 }
 
 export enum DBFEnemy {
@@ -23,7 +24,8 @@ export enum DBFEnemy {
     DOT = 'damage over time',
     DMG = 'damage dealer',
     DMG_FIXED = 'fixed damage dealer',
-    CUT = 'HP cut'
+    CUT = 'HP cut',
+    GRD = 'guard rate reduction'
 }
 
 export enum HealCrew {

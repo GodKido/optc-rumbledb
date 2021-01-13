@@ -19,12 +19,12 @@ export let characters: Unit[] = [
         type: Type.QCK,
         style: Style.HLR,
         styleIcon: '',
-        rumbleSpecial: '',
-        rumbleSkill: '',
-        rumblePattern: '',
-        rumbleTarget: '',
-        rumbleResistances: '',
-        tags: []
+        rumbleSpecial: 'Level 10 (34 CT): Targets 1 enemy for 1000 fixed damage, targets enemies wide range for tier 4 SPD down (20 s.), heals HP of all crew members by 1.25x own RCV',
+        rumbleSkill: 'Level 5: When own HP is above 50% targets all QCK/PSY allies for tier 9 ATK boost. When own HP is below 50% targets all QCK/PSY allies for tier 9 RCV boost ',
+        rumblePattern: 'Normal, tier 2 Heal surrounding allies (mid-range), Normal, tier 2 Heal surrounding allies (short range)',
+        rumbleTarget: 'Closest enemy',
+        rumbleResistances: 'Bind (50% chance)',
+        tags: [Tags.BUFF, Tags.ATK, Tags.RCV, Tags.DMG_FIXED, Tags.DEBUFF, Tags.SPD, Tags.HEAL]
     },
     {
         id: 1985,
@@ -41,10 +41,10 @@ export let characters: Unit[] = [
         type: Type.DUAL,
         style: Style.SUP,
         styleIcon: '',
-        rumbleSpecial:  'Level 10: Targets Free Spirit allies for ATK boost (3 tiers, 20 s.), DEF boost (3 tiers, 20 s.). Targets wide-range enemies on the side for damage: 0.65x own ATK',
+        rumbleSpecial:  'Level 10 (27 CT): Targets Free Spirit allies for ATK boost (3 tiers, 20 s.), DEF boost (3 tiers, 20 s.). Targets wide-range enemies on the side for damage: 0.65x own ATK',
         rumbleSkill: 'Level 5: Targets Free Spirit allies for tier 5 ATK boost and level 2 Crit chance boost',
         rumblePattern: 'Strong, Strong, Lv 1 Heal on nearby allies (short range), Strong',
-        rumbleTarget: 'Enemies nearby',
+        rumbleTarget: 'Closest enemy',
         rumbleResistances: 'Paralysis (50% chance)',
         tags: [Tags.BUFF, Tags.ATK, Tags.DEF, Tags.DMG, Tags.BUFF, Tags.ATK, Tags.CRIT]
     },
@@ -63,15 +63,15 @@ export let characters: Unit[] = [
         type: Type.PSY,
         style: Style.SUP,
         styleIcon: '',
-        rumbleSpecial: '',
-        rumbleSkill: '',
-        rumblePattern: '',
-        rumbleTarget: '',
-        rumbleResistances: '',
+        rumbleSpecial: 'Level 10 (15 CT): Targets 4 enemies for damage by 1x own ATK, targets Slasher/Shooter allies for tier 7 ATK boost (24 s.)',
+        rumbleSkill: 'Level 5: Targets Slasher/Shooter allies for tier 6 SPD boost, during first 30 seconds of battle targets Slasher/Shooter allies for tier 4 CT loading speed boost',
+        rumblePattern: 'Normal, Strong, tier 1 Heal surrounding allies (mid-range), Normal',
+        rumbleTarget: 'Enemy with highest ATK',
+        rumbleResistances: 'Silence (70% chance)',
         tags: [Tags.DMG, Tags.ATK, Tags.BUFF, Tags.CTS,]
     },
     {
-        id: 2400,
+        id: 2958,
         isExpanded: false,
         icon: '',
         artwork: '',
@@ -85,12 +85,12 @@ export let characters: Unit[] = [
         type: Type.STR,
         style: Style.ATK,
         styleIcon: '',
-        rumbleSpecial: '',
-        rumbleSkill: '',
-        rumblePattern: '',
-        rumbleTarget: '',
-        rumbleResistances: '',
-        tags: []
+        rumbleSpecial: 'Level 10 (32 CT): Targets STR allies for tier 5 ATK boost (20 s.), targets 2 enemies for damage by 1.3x own ATK. When 30 or less seconds are left, targets mid-range enemies for damage by 2x own ATK',
+        rumbleSkill: 'Level 5: Targets STR allies for tier 5 ATK boost and ter 1 SPD boost',
+        rumblePattern: 'Normal, Normal, Strong, Full power',
+        rumbleTarget: 'Closest enemy',
+        rumbleResistances: 'Bind (50% chance)',
+        tags: [Tags.DMG, Tags.BUFF, Tags.ATK, Tags.SPD]
     },
     {
         id: 2588,
@@ -107,12 +107,12 @@ export let characters: Unit[] = [
         type: Type.DEX,
         style: Style.OBS,
         styleIcon: '',
-        rumbleSpecial: '',
-        rumbleSkill: '',
-        rumblePattern: '',
-        rumbleTarget: '',
-        rumbleResistances: '',
-        tags: []
+        rumbleSpecial: 'Level 10 (22 CT): Targets enemies (wide range) for damage by 1.1x own ATK and for Paralysis (30% chance, 24 s.)',
+        rumbleSkill: 'Level 5: Targets DEX allies for tier 6 CT loading speed boost. When 50 or less seconds are left, targets DEX allies for tier 2 CT loading speed boost',
+        rumblePattern: 'Normal, tier 2 Heal self, Strong, tier 1 Heal surrounding allies (mid-range)',
+        rumbleTarget: 'Closest enemy',
+        rumbleResistances: 'Seldom heals own HP by 150',
+        tags: [Tags.DMG, Tags.PAR, Tags.CTS]
     },
     {
         id: 2444,
@@ -129,12 +129,12 @@ export let characters: Unit[] = [
         type: Type.INT,
         style: Style.DEF,
         styleIcon: '',
-        rumbleSpecial: '',
-        rumbleSkill: '',
-        rumblePattern: '',
-        rumbleTarget: '',
-        rumbleResistances: '',
-        tags: []
+        rumbleSpecial: 'Level 10 (27 CT): Targets 3 enemies for damage by 2x own ATK, targets Driven/Slasher allies for tier 5 DEF boost (19 s.) and tier 6 CRIT chance boost (19 s.)',
+        rumbleSkill: 'Level 5: Targets Driven/Slasher allies for tier 6 HP boost; first 30 seconds from start of the battle targets Slasher/Driven allies for tier 3 DEF boost and tier 6 ATK boost',
+        rumblePattern: 'Normal, Normal, tier 2 Heal self',
+        rumbleTarget: 'Closest enemy',
+        rumbleResistances: 'Seldom heals own HP by 150 when under 50%',
+        tags: [Tags.DMG, Tags.BUFF,Tags.DEF, Tags.CRIT, Tags.HP, Tags.ATK]
     },
     {
         id: 2964,
@@ -154,7 +154,7 @@ export let characters: Unit[] = [
         rumbleSpecial: 'Targets mid-range enemies for damage: 2x own ATK, boosts own ATK (10 tiers, 25 s.), boosts own CT loading speed (3 tiers, 25 s.)',
         rumbleSkill: 'Targets INT allies for HP boost (5 tiers), when HP is below 60% boosts own CT loading speed (5 tiers)',
         rumblePattern: 'Normal, Normal, Strong, Full power',
-        rumbleTarget: 'Enemies nearby',
+        rumbleTarget: 'Closest enemy',
         rumbleResistances: 'Seldom heals own HP by 150 when below 50%',
         tags: [Tags.DMG, Tags.ATK, Tags.BUFF, Tags.CTS, Tags.BUFF, Tags.HP, Tags.CTS]
     },
@@ -198,7 +198,7 @@ export let characters: Unit[] = [
         rumbleSpecial:  'Level 10 (28 CT): Targets all enemies for 2200 fixed damage, targets Free Spirit/Cerebral/Powerhouse enemies for tier 5 SPD down (20 s.) and tier 5 CT loading speed (20 s.)',
         rumbleSkill: 'Level 5: Targets INT allies for tier 5 SPD boost, targets PSY enemies for tier 4 DEF down and tier 5 CT loading speed down',
         rumblePattern: 'Normal, tier 2 Heal self, Strong, Normal',
-        rumbleTarget: 'Enemies close',
+        rumbleTarget: 'Closest enemy',
         rumbleResistances: 'Paralysis (50% chance)',
         tags: [Tags.DMG_FIXED, Tags.DEBUFF, Tags.BUFF, Tags.SPD, Tags.CTS, Tags.DEF]
     },
@@ -242,7 +242,7 @@ export let characters: Unit[] = [
         rumbleSpecial:  'Level 10 (35 CT): Targets all enemies for tier 3 DEF down (18 s.), targets 2 STR enemies for tier 9 ATK down and SPD down (24 s.)',
         rumbleSkill: 'Level 5: First 20 seconds from start of the battle: tier 8 CT loading speed reduction for 3 STR enemies, targets QCK allies for tier 5 CT loading speed buff',
         rumblePattern: 'Normal, tier 1 Heal self, Normal, tier 2 Heal self',
-        rumbleTarget: 'Enemies close',
+        rumbleTarget: 'Closest enemy',
         rumbleResistances: 'Seldom recovers heals own HP by 250',
         tags: [Tags.DEBUFF, Tags.DEF, Tags.SPD, Tags.CTS, Tags.ATK, Tags.BUFF]
     },
